@@ -1,0 +1,9 @@
+{
+  "event_id": "092504-003-sample-001",
+  "event_type": "CONTEXT_OPENED",
+  "aggregate_type": "excavation_unit",
+  "aggregate_id": "joint_excavation_context-001",
+  "occurred_at": "2026-09-24T12:00:00+08:00",
+  "version": 1,
+  "summary": "已登记一条可供联调的领域事实"
+}
