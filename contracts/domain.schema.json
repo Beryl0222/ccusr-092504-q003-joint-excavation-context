@@ -22,16 +22,29 @@
         "CONTEXT_OPENED",
         "OBSERVATION_CAPTURED",
         "OBJECT_TRANSFERRED",
+        "CLAIM_SUBMITTED",
         "CLAIM_REVIEWED",
-        "RECORD_PUBLISHED"
+        "CLAIM_SUPERSEDED",
+        "CLAIM_SCOPE_NARROWED",
+        "RECORD_PUBLISHED",
+        "ALIAS_REGISTERED",
+        "SEAL_ANOMALY_RECORDED",
+        "CONTAINER_FROZEN",
+        "CONTAINER_RELEASED",
+        "CONFLICT_QUARANTINED"
       ]
     },
     "aggregate_type": {
       "type": "string",
       "enum": [
+        "survey_area",
         "excavation_unit",
+        "stratigraphic_unit",
+        "structure",
         "archaeological_object",
         "survey_revision",
+        "sample",
+        "custody_transfer",
         "research_claim"
       ]
     },
