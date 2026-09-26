@@ -1,9 +1,29 @@
 {
-  "event_id": "092504-003-sample-001",
+  "event_id": "2026-0924-ctx-001",
   "event_type": "CONTEXT_OPENED",
   "aggregate_type": "excavation_unit",
-  "aggregate_id": "joint_excavation_context-001",
+  "aggregate_id": "unit-2026-017",
   "occurred_at": "2026-09-24T12:00:00+08:00",
   "version": 1,
-  "summary": "已登记一条可供联调的领域事实"
+  "summary": "中埃联合探方开启：南部圣湖东岸第17号探方",
+  "source": {
+    "party": "joint",
+    "system": "field-tablet-03",
+    "operator": "field-recorder-07"
+  },
+  "batch_id": "offline-2026-09-24-tablet03",
+  "data": {
+    "kind": "excavation_unit",
+    "label": "T2026-17 / Unit-S23",
+    "parent_id": "area-south-lake",
+    "coordinates": {
+      "crs": "local-grid",
+      "easting": 500812.4,
+      "northing": 3100231.9
+    },
+    "attributes": {
+      "opened_by": ["cn", "eg"],
+      "objective": "复核旧探方记录中围墙与南部圣湖岸线的关系"
+    }
+  }
 }

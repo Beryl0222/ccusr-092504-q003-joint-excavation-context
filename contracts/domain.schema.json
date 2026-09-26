@@ -20,19 +20,38 @@
       "type": "string",
       "enum": [
         "CONTEXT_OPENED",
+        "ALIAS_REGISTERED",
         "OBSERVATION_CAPTURED",
+        "RELATION_RECORDED",
+        "SURVEY_REVISED",
+        "OBJECT_RECOVERED",
         "OBJECT_TRANSFERRED",
+        "SEAL_ANOMALY_REPORTED",
+        "CONTAINER_FROZEN",
+        "QUARANTINE_MARKED",
+        "CLAIM_PROPOSED",
         "CLAIM_REVIEWED",
-        "RECORD_PUBLISHED"
+        "CLAIM_SUPERSEDED",
+        "RECORD_PUBLISHED",
+        "PROCESS_STEP_RECORDED"
       ]
     },
     "aggregate_type": {
       "type": "string",
       "enum": [
+        "survey_area",
+        "stratigraphic_unit",
+        "structure",
         "excavation_unit",
         "archaeological_object",
+        "sample",
+        "custody_container",
         "survey_revision",
-        "research_claim"
+        "measurement_point",
+        "research_claim",
+        "identifier_crosswalk",
+        "quarantine_marker",
+        "process_journal"
       ]
     },
     "aggregate_id": {
@@ -50,6 +69,35 @@
     "summary": {
       "type": "string",
       "minLength": 1
+    },
+    "recorded_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "入库时间，由档案服务在接收时写入；离线晚到事件的 occurred_at 可早于 recorded_at"
+    },
+    "batch_id": {
+      "type": "string",
+      "description": "离线批量导入的批次标识，用于幂等恢复与审计"
+    },
+    "source": {
+      "type": "object",
+      "description": "来源信息：中方/埃方、来源系统与经办人",
+      "properties": {
+        "party": {
+          "type": "string",
+          "enum": ["cn", "eg", "joint", "system"]
+        },
+        "system": {
+          "type": "string"
+        },
+        "operator": {
+          "type": "string"
+        }
+      }
+    },
+    "data": {
+      "type": "object",
+      "description": "各事件类型的业务负载，字段约定见 README"
     }
   },
   "additionalProperties": true
